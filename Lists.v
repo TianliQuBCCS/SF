@@ -13,7 +13,7 @@ Module NatList.
 Inductive natprod : Type :=
   | pair (n1 n2 : nat).
 
-(** This declaration can be read: "The one and only way to
+(** This declaration can be read: "Tphe one and only way to
     construct a pair of numbers is by applying the constructor [pair]
     to two arguments of type [nat]." *)
 
@@ -1090,7 +1090,8 @@ Proof.
 Theorem rev_injective : forall (l1 l2 : natlist),
   rev l1 = rev l2 -> l1 = l2.
 Proof. 
-  intros l1 l2 H. simpl. rewrite <- (rev_involutive l1). rewrite <- rev_involutive. rewrite H. reflexivity. Qed. 
+  intros l1 l2 H. 
+  simpl. rewrite <- (rev_involutive l1). rewrite <- rev_involutive. rewrite H. reflexivity. Qed. 
 (** [] *)
 
 (* ################################################################# *)
